@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-all: showhn producthunt enrich
+all: showhn enrich
 
 showhn:
 	@echo "Fetching Show HN posts..."
@@ -10,8 +10,11 @@ showhn:
 	@echo "✓ Fetched Show HN URLs"
 
 producthunt:
-	@echo "Fetching Product Hunt newest products..."
-	@bun run fetch_producthunt.mjs 2>&1
+	@echo "⚠️  Product Hunt blocks automated scraping"
+	@echo "📋 To add Product Hunt URLs:"
+	@echo "   1. Visit https://www.producthunt.com/"
+	@echo "   2. Copy product website URLs"
+	@echo "   3. Paste into producthunt_urls.txt (one per line)"
 	@test -f producthunt_urls.txt || touch producthunt_urls.txt
 
 # X/Twitter scraping is disabled - snscrape is broken with Python 3.14 and X requires auth

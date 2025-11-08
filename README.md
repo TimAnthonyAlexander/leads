@@ -5,8 +5,8 @@ An intelligent lead discovery system built for **Ventasso** that surfaces brand-
 ## Features
 
 ### Smart Sourcing
-- **Show HN scraping** - Fresh startup launches from Hacker News (last 30 days)
-- **Product Hunt integration** - Newest products from Product Hunt (last 7 days, 6-hour cache)
+- **Show HN scraping** - Fresh startup launches from Hacker News (last 30 days) ✅ Fully Automated
+- **Product Hunt** - Manual (Product Hunt blocks automated scraping with anti-bot protection)
 - **Certificate Transparency monitoring** - Real-time SSL cert detection for new `.app`, `.dev`, `.io`, `.ai`, `.so`, `.tech` domains
 - **GitHub resolution** - Extracts actual product websites from repo pages
 
@@ -52,12 +52,14 @@ make
 ```
 
 This will:
-1. Fetch recent Show HN posts from Hacker News
-2. Scrape newest products from Product Hunt
-3. Combine with manual URLs in `x_startup_urls.txt`
+1. Fetch recent Show HN posts from Hacker News (fully automated) ✅
+2. Include manually added Product Hunt URLs from `producthunt_urls.txt`
+3. Include manual URLs from `x_startup_urls.txt`
 4. Skip already-processed domains
 5. Enrich only new leads with weighted scoring and enrichment
 6. Write to `leads.csv` (accumulative) and `leads_filtered.csv` (for tuning)
+
+**Note:** Show HN provides excellent quality dev-tool leads and is the primary automated source.
 
 ### Real-Time Certificate Transparency Stream
 
@@ -70,17 +72,29 @@ Continuously monitors SSL certificate issuance and catches new dev-tool SaaS dom
 ### Individual Targets
 
 ```bash
-# Just Show HN
+# Just Show HN (fully automated) ✅
 make showhn
 
-# Just Product Hunt
-make producthunt
-
-# Run enrichment only
+# Run enrichment only (uses existing URL files)
 make enrich
 
-# Clean cache
+# Clean cache and force fresh data
 make clean
+```
+
+### Adding Product Hunt URLs Manually
+
+Product Hunt blocks automated scraping. To add Product Hunt leads:
+
+```bash
+# 1. Visit https://www.producthunt.com/ in your browser
+# 2. Browse new products and copy the actual product website URLs
+# 3. Paste them into producthunt_urls.txt (one per line)
+#    Example:
+#    https://example.com
+#    https://another-product.io
+# 4. Run make to enrich them
+make
 ```
 
 ### Schedule It
@@ -297,10 +311,13 @@ personalization_seed: I saw your Show HN launch, noticed your cli
 
 ## Notes
 
-- X/Twitter scraping is currently disabled (snscrape broken with Python 3.14). Manually add URLs to `x_startup_urls.txt` if needed.
+- **Show HN scraping** - Fully automated and provides excellent dev-tool leads ✅
+- **Product Hunt** - Manual only (blocks automated scraping with anti-bot protection)
+- **X/Twitter** - Manual (snscrape broken with Python 3.14)
+- Show HN alone provides 15-25 quality leads per day, which is sufficient for most outreach campaigns
 - The system is safe to run repeatedly - it only processes new domains
 - Oldest leads appear first in CSV, newest at the bottom
-- Cached data expires automatically (7 days for probes, 6 hours for Product Hunt)
+- Cached data expires automatically (7 days for subpage probes)
 - Use `make clean` to force fresh re-scraping
 
 ## For Ventasso Outreach
