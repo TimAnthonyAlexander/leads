@@ -1,0 +1,21 @@
+Loaded 14 existing leads from leads.csv
+Processed 4 new leads, skipped 0 existing, filtered 15 (platforms/low-intent)
+discovered_at,source_url,canonical,title,status,score,has_pricing,has_docs,has_signup,has_changelog,has_privacy,has_terms,emails
+2025-11-08T15:35:45.995Z,https://earlynotify.com,earlynotify.com.com,EarlyNotify – Apple iOS Update Alerts,200,2,0,0,0,0,1,0,you@example.com
+2025-11-08T15:35:46.686Z,https://gempix-2.co/,gempix-2.co.co,"""Gempix2: Professional AI Image Editor Powered by Nano Banana 2 | Gempix2""",200,6,1,1,1,0,1,1,"""support@gempix-2.co | you@example.com | your@email.com"""
+2025-11-08T15:36:08.601Z,https://github.com/sentomk/patternia,github.com.com,GitHub - sentomk/patternia: Providing pattern matching for modern c++.,200,7,1,1,1,1,1,0,
+2025-11-08T15:36:08.686Z,https://golden-ratio-beauty-app.vercel.app/,vercel.app.app,Golden Ratio Beauty App,200,0,0,0,0,0,0,0,
+2025-11-08T15:36:08.803Z,https://klotski.org,klotski.org.org,"""Klotski | Play On Klotski""",200,5,0,0,1,0,1,1,"""contact@klotski.org | u003econtact@klotski.org"""
+2025-11-08T15:36:11.975Z,https://polymetron.substack.com/p/computational-metaphysics-no-more,substack.com.com,Computational Metaphysics: No More Quantum Theories,200,4,0,0,1,0,1,0,
+2025-11-08T15:36:12.996Z,https://servercompass.app/,servercompass.app.app,Server Compass – Deploy Like Vercel on Your Own VPS,200,7,1,1,1,1,1,1,
+2025-11-08T15:36:15.776Z,https://sonnetexplorer.com/,sonnetexplorer.com.com,Shakespeare's Sonnets - Interactive Collection,200,0,0,0,0,0,0,0,
+2025-11-08T15:36:15.870Z,https://spectrum-news.netlify.app/,netlify.app.app,Spectrum News — Clean,200,0,0,0,0,0,0,0,
+2025-11-08T15:36:19.096Z,https://store.steampowered.com/app/3879010/Sentinel_Signal/,steampowered.com.com,Save 25% on Sentinel Signal on Steam,200,2,0,0,0,0,1,0,
+2025-11-08T15:36:22.144Z,https://upime.com,upime.com.com,UPI Me - Create Your UPI Payment Page,200,1,0,0,0,0,0,0,
+2025-11-08T15:36:22.223Z,https://watilde.github.io/KokoScript/,github.io.io,KokoScript Playground,200,1,0,0,0,0,0,0,
+2025-11-08T15:36:22.462Z,https://www.colit.app/,colit.app.app,"""CoLit | Collaborative Literature Platform""",200,0,0,0,0,0,0,0,
+2025-11-08T15:36:22.941Z,https://www.hindispeakingtutor.in/,hindispeakingtutor.in.in,Your Hindi Speaking Tutor,200,2,0,0,0,0,1,0,
+2025-11-08T15:40:01.638Z,https://gempix-2.co/,gempix-2.co,"Gempix2: Professional AI Image Editor Powered by Nano Banana 2 | Gempix2",200,6,1,1,1,0,1,1,support@gempix-2.co
+2025-11-08T15:40:03.851Z,https://klotski.org,klotski.org,"Klotski | Play On Klotski",200,5,0,0,1,0,1,1,"contact@klotski.org | u003econtact@klotski.org"
+2025-11-08T15:40:06.691Z,https://polymetron.substack.com/p/computational-metaphysics-no-more,polymetron.substack.com,Computational Metaphysics: No More Quantum Theories,200,4,0,0,1,0,1,0,"privacy@substackinc.com | EUrepresentative.Substack@twobirds.com | UKrepresentative.Substack@twobirds.com"
+2025-11-08T15:40:10.359Z,https://servercompass.app/,servercompass.app,Server Compass – Deploy Like Vercel on Your Own VPS,200,7,1,1,1,1,1,1,hello@stoicsoft.com
